@@ -9,6 +9,7 @@
 #import "ShowViewController.h"
 #import "UIView+ViewUtils.h"
 #import "NSAttributedString+KLTextAttachment.h"
+#import "KLParseEngine.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -35,7 +36,10 @@
 - (void)showAttributedText:(NSAttributedString *)attributedText{
     NSString *plainString = [NSString stringWithFormat:@"转义过的内容:\n%@\n\n富文本的显示方式:\n",[attributedText getPlainString]];
     
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:plainString];
+    NSString *showString = [KLParseEngine parseToAttributedString:plainString];
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[plainString stringByAppendingFormat:@"\nShowString:\n%@",showString]];
+    
     [attributedString appendAttributedString:attributedText];
     
     self.label.attributedText = attributedString;

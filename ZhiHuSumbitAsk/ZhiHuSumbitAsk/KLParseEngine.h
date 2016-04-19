@@ -10,6 +10,6 @@
 
 @interface KLParseEngine : NSObject
 
-- (NSAttributedString *)parseToAttributedString:(NSString *)plainString;
++ (NSString *)parseToAttributedString:(NSString *)plainString;
 
 @end

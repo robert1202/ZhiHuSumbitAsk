@@ -10,9 +10,23 @@
 
 @implementation KLParseEngine
 
-- (NSAttributedString *)parseToAttributedString:(NSString *)plainString{
++ (NSString *)parseToAttributedString:(NSString *)plainString{
     
-    return nil;
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:
+                                  @"<img(\\S*?)[^>]*>.*?</>|<img.*? />" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSArray *resultList = [regex matchesInString:plainString options:NSMatchingReportProgress range:NSMakeRange(0, [plainString length])];
+    NSLog(@"%@",resultList);
+    NSMutableString *mutableStr = [plainString mutableCopy];
+    
+    NSLog(@"plainString ＝ %@",plainString);
+
+    for (NSTextCheckingResult *result in resultList) {
+        [mutableStr replaceCharactersInRange:result.range withString:@"[上传图片]"];
+    }
+    NSLog(@"mutableStr ＝ %@",mutableStr);
+
+    return mutableStr;
 }
 
 @end
