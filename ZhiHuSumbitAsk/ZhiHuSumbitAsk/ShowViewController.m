@@ -36,9 +36,9 @@
 - (void)showAttributedText:(NSAttributedString *)attributedText{
     NSString *plainString = [NSString stringWithFormat:@"转义过的内容:\n%@\n\n富文本的显示方式:\n",[attributedText getPlainString]];
     
-    NSString *showString = [KLParseEngine parseToAttributedString:plainString];
+    NSString *parseString = [KLParseEngine parseToAttributedString:plainString];
     
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[plainString stringByAppendingFormat:@"\nShowString:\n%@",showString]];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[plainString stringByAppendingFormat:@"\nShowString:\n%@",parseString]];
     
     [attributedString appendAttributedString:attributedText];
     
