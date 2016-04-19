@@ -11,6 +11,7 @@
 #import "NSAttributedString+KLTextAttachment.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 @interface ShowViewController()
 
@@ -48,7 +49,7 @@
 - (UILabel *)label
 {
     if (!_label) {
-        UILabel* label = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, SCREEN_WIDTH - 20, 0)];
+        UILabel* label = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, SCREEN_WIDTH - 20, SCREEN_HEIGHT - 64 - 10)];
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor blackColor];
         label.font = [UIFont systemFontOfSize:16.0f];
@@ -64,7 +65,7 @@
 - (UIScrollView *)scrollView
 {
     if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_WIDTH)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     }
     return _scrollView;
 }

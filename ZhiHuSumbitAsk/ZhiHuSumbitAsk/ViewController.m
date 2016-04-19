@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "UITextView+AssemblyAttributedText.h"
 #import "UIActionSheet+MKBlockAdditions.h"
-#import "TPKeyboardAvoidingScrollView.h"
 #import "ShowViewController.h"
 #import "UIImage+Utils.h"
 #import "KLTextContainer.h"
@@ -28,10 +27,10 @@
 
 @implementation ViewController
 
-- (void)loadView{
-    TPKeyboardAvoidingScrollView *scrollView = [[TPKeyboardAvoidingScrollView alloc] initWithFrame:[UIScreen mainScreen] .applicationFrame];
-    self.view = scrollView;
-}
+//- (void)loadView{
+//    TPKeyboardAvoidingScrollView *scrollView = [[TPKeyboardAvoidingScrollView alloc] initWithFrame:[UIScreen mainScreen] .applicationFrame];
+//    self.view = scrollView;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,6 +43,50 @@
     UIToolbar *toolbar = [self textViewToolBar];
     self.textView.inputAccessoryView = toolbar;
     
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShown:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)moveTextViewForKeyboard:(NSNotification*)aNotification up:(BOOL)up {
+    NSDictionary* userInfo = [aNotification userInfo];
+    NSTimeInterval animationDuration;
+    UIViewAnimationCurve animationCurve;
+    CGRect keyboardEndFrame;
+    
+    [[userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] getValue:&animationCurve];
+    [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] getValue:&animationDuration];
+    [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] getValue:&keyboardEndFrame];
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    [UIView setAnimationCurve:animationCurve];
+    
+    CGRect newFrame = _textView.frame;
+    CGRect keyboardFrame = [self.view convertRect:keyboardEndFrame toView:nil];
+//    keyboardFrame.size.height -= tabBarController.tabBar.frame.size.height;
+    newFrame.size.height -= ((keyboardFrame.size.height + 10) * (up?1:-1));
+    _textView.frame = newFrame;
+    
+    [UIView commitAnimations];
+}
+
+- (void)keyboardWillShown:(NSNotification*)aNotification
+{
+    [self moveTextViewForKeyboard:aNotification up:YES];
+}
+
+- (void)keyboardWillHide:(NSNotification*)aNotification
+{
+    [self moveTextViewForKeyboard:aNotification up:NO];
 }
 
 - (UIToolbar *)textViewToolBar{
@@ -104,26 +147,23 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.indicatorView stopAnimating];
         
-        if (arc4random() % 2 == 1) {
-            
-            NSDictionary *attributes = @{
-                                         NSFontAttributeName : [UIFont systemFontOfSize:16],
-                                         };
-            self.textView.attributedText = [self.textContainer uploadFailureString:self.textView.attributedText imageAtIndex:location errorAttributes:attributes];
-        }
+//        if (arc4random() % 2 == 1) {
+//            
+//            NSDictionary *attributes = @{
+//                                         NSFontAttributeName : [UIFont systemFontOfSize:16],
+//                                         };
+//            self.textView.attributedText = [self.textContainer uploadFailureString:self.textView.attributedText imageAtIndex:location errorAttributes:attributes];
+//        }
     });
     
     self.textView.selectedRange = NSMakeRange(self.textView.selectedRange.location + 1, 1);
-    [self.textView becomeFirstResponder];
-    [self.textView scrollRangeToVisible:self.textView.selectedRange];
-    
     NSLog(@"%@",self.textView.text);
 }
 
 - (UITextView *)textView
 {
     if (!_textView) {
-        _textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 180)];
+        _textView = [[UITextView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         _textView.font = [UIFont systemFontOfSize:16];
         _textView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     }

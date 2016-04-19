@@ -14,10 +14,6 @@
 		048DE96D1CBF9DC700714A4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048DE96B1CBF9DC700714A4C /* LaunchScreen.storyboard */; };
 		048DE97A1CBFA05200714A4C /* NSObject+MKBlockAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DE9771CBFA05200714A4C /* NSObject+MKBlockAdditions.m */; };
 		048DE97B1CBFA05200714A4C /* UIActionSheet+MKBlockAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DE9791CBFA05200714A4C /* UIActionSheet+MKBlockAdditions.m */; };
-		048DE9FC1CBFC12900714A4C /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DE9F51CBFC12900714A4C /* TPKeyboardAvoidingCollectionView.m */; };
-		048DE9FD1CBFC12900714A4C /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DE9F71CBFC12900714A4C /* TPKeyboardAvoidingScrollView.m */; };
-		048DE9FE1CBFC12900714A4C /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DE9F91CBFC12900714A4C /* TPKeyboardAvoidingTableView.m */; };
-		048DE9FF1CBFC12900714A4C /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DE9FB1CBFC12900714A4C /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		048DEA021CBFC3EF00714A4C /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DEA011CBFC3EF00714A4C /* ShowViewController.m */; };
 		048DEA051CBFC91F00714A4C /* UIView+ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DEA041CBFC91F00714A4C /* UIView+ViewUtils.m */; };
 		048DEA081CBFCF4300714A4C /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DEA071CBFCF4300714A4C /* UIImage+Utils.m */; };
@@ -41,6 +37,7 @@
 		04AA1A801CC0A01D00399FC4 /* UITextView+AssemblyAttributedText.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA1A7F1CC0A01D00399FC4 /* UITextView+AssemblyAttributedText.m */; };
 		04B1F7AA1CC5CB0200D2FFFF /* KLTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1F7A91CC5CB0200D2FFFF /* KLTextAttachment.m */; };
 		04B1F7AD1CC5CB0A00D2FFFF /* NSAttributedString+KLTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1F7AB1CC5CB0A00D2FFFF /* NSAttributedString+KLTextAttachment.m */; };
+		A563F2D91CC663B9003E0C22 /* KLParseEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = A563F2D81CC663B9003E0C22 /* KLParseEngine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,14 +55,6 @@
 		048DE9771CBFA05200714A4C /* NSObject+MKBlockAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MKBlockAdditions.m"; sourceTree = "<group>"; };
 		048DE9781CBFA05200714A4C /* UIActionSheet+MKBlockAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+MKBlockAdditions.h"; sourceTree = "<group>"; };
 		048DE9791CBFA05200714A4C /* UIActionSheet+MKBlockAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+MKBlockAdditions.m"; sourceTree = "<group>"; };
-		048DE9F41CBFC12900714A4C /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
-		048DE9F51CBFC12900714A4C /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
-		048DE9F61CBFC12900714A4C /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
-		048DE9F71CBFC12900714A4C /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
-		048DE9F81CBFC12900714A4C /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
-		048DE9F91CBFC12900714A4C /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
-		048DE9FA1CBFC12900714A4C /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
-		048DE9FB1CBFC12900714A4C /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		048DEA001CBFC3EF00714A4C /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
 		048DEA011CBFC3EF00714A4C /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
 		048DEA031CBFC91F00714A4C /* UIView+ViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewUtils.h"; sourceTree = "<group>"; };
@@ -113,6 +102,8 @@
 		04B1F7A91CC5CB0200D2FFFF /* KLTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTextAttachment.m; sourceTree = "<group>"; };
 		04B1F7AB1CC5CB0A00D2FFFF /* NSAttributedString+KLTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+KLTextAttachment.m"; sourceTree = "<group>"; };
 		04B1F7AC1CC5CB0A00D2FFFF /* NSAttributedString+KLTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+KLTextAttachment.h"; sourceTree = "<group>"; };
+		A563F2D71CC663B9003E0C22 /* KLParseEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLParseEngine.h; sourceTree = "<group>"; };
+		A563F2D81CC663B9003E0C22 /* KLParseEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLParseEngine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,18 +138,8 @@
 			children = (
 				048DEA091CBFD10E00714A4C /* Category */,
 				048DEA0A1CBFD11C00714A4C /* OpenFramework */,
-				048DE9601CBF9DC700714A4C /* AppDelegate.h */,
-				048DE9611CBF9DC700714A4C /* AppDelegate.m */,
-				048DE9631CBF9DC700714A4C /* ViewController.h */,
-				048DE9641CBF9DC700714A4C /* ViewController.m */,
-				048DEA001CBFC3EF00714A4C /* ShowViewController.h */,
-				048DEA011CBFC3EF00714A4C /* ShowViewController.m */,
-				04B1F7A81CC5CB0200D2FFFF /* KLTextAttachment.h */,
-				04B1F7A91CC5CB0200D2FFFF /* KLTextAttachment.m */,
-				048DEA0E1CBFD9CE00714A4C /* KLTextContainer.h */,
-				048DEA0F1CBFD9CE00714A4C /* KLTextContainer.m */,
-				04B1F7AC1CC5CB0A00D2FFFF /* NSAttributedString+KLTextAttachment.h */,
-				04B1F7AB1CC5CB0A00D2FFFF /* NSAttributedString+KLTextAttachment.m */,
+				A563F2D51CC66303003E0C22 /* ViewController */,
+				A563F2D61CC6630D003E0C22 /* Control */,
 				048DE96B1CBF9DC700714A4C /* LaunchScreen.storyboard */,
 				048DE96E1CBF9DC700714A4C /* Info.plist */,
 				048DE9691CBF9DC700714A4C /* Assets.xcassets */,
@@ -187,21 +168,6 @@
 			path = MKAdditions;
 			sourceTree = "<group>";
 		};
-		048DE9F31CBFC12900714A4C /* TPKeyboardAvoiding */ = {
-			isa = PBXGroup;
-			children = (
-				048DE9F41CBFC12900714A4C /* TPKeyboardAvoidingCollectionView.h */,
-				048DE9F51CBFC12900714A4C /* TPKeyboardAvoidingCollectionView.m */,
-				048DE9F61CBFC12900714A4C /* TPKeyboardAvoidingScrollView.h */,
-				048DE9F71CBFC12900714A4C /* TPKeyboardAvoidingScrollView.m */,
-				048DE9F81CBFC12900714A4C /* TPKeyboardAvoidingTableView.h */,
-				048DE9F91CBFC12900714A4C /* TPKeyboardAvoidingTableView.m */,
-				048DE9FA1CBFC12900714A4C /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
-				048DE9FB1CBFC12900714A4C /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
-			);
-			path = TPKeyboardAvoiding;
-			sourceTree = "<group>";
-		};
 		048DEA091CBFD10E00714A4C /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				04AA1A4C1CC094D800399FC4 /* SDWebImage */,
-				048DE9F31CBFC12900714A4C /* TPKeyboardAvoiding */,
 				048DE9741CBFA05200714A4C /* MKAdditions */,
 			);
 			name = OpenFramework;
@@ -263,6 +228,34 @@
 				04AA1A6D1CC094D800399FC4 /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		A563F2D51CC66303003E0C22 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				048DE9601CBF9DC700714A4C /* AppDelegate.h */,
+				048DE9611CBF9DC700714A4C /* AppDelegate.m */,
+				048DE9631CBF9DC700714A4C /* ViewController.h */,
+				048DE9641CBF9DC700714A4C /* ViewController.m */,
+				048DEA001CBFC3EF00714A4C /* ShowViewController.h */,
+				048DEA011CBFC3EF00714A4C /* ShowViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		A563F2D61CC6630D003E0C22 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				04B1F7A81CC5CB0200D2FFFF /* KLTextAttachment.h */,
+				04B1F7A91CC5CB0200D2FFFF /* KLTextAttachment.m */,
+				048DEA0E1CBFD9CE00714A4C /* KLTextContainer.h */,
+				048DEA0F1CBFD9CE00714A4C /* KLTextContainer.m */,
+				04B1F7AC1CC5CB0A00D2FFFF /* NSAttributedString+KLTextAttachment.h */,
+				04B1F7AB1CC5CB0A00D2FFFF /* NSAttributedString+KLTextAttachment.m */,
+				A563F2D71CC663B9003E0C22 /* KLParseEngine.h */,
+				A563F2D81CC663B9003E0C22 /* KLParseEngine.m */,
+			);
+			name = Control;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,17 +331,15 @@
 				04AA1A7A1CC094D800399FC4 /* UIImage+WebP.m in Sources */,
 				04AA1A801CC0A01D00399FC4 /* UITextView+AssemblyAttributedText.m in Sources */,
 				04AA1A751CC094D800399FC4 /* SDWebImageManager.m in Sources */,
-				048DE9FD1CBFC12900714A4C /* TPKeyboardAvoidingScrollView.m in Sources */,
 				04B1F7AD1CC5CB0A00D2FFFF /* NSAttributedString+KLTextAttachment.m in Sources */,
 				048DEA021CBFC3EF00714A4C /* ShowViewController.m in Sources */,
-				048DE9FE1CBFC12900714A4C /* TPKeyboardAvoidingTableView.m in Sources */,
 				04AA1A731CC094D800399FC4 /* SDWebImageDownloader.m in Sources */,
 				048DEA081CBFCF4300714A4C /* UIImage+Utils.m in Sources */,
 				048DE9651CBF9DC700714A4C /* ViewController.m in Sources */,
 				048DE9621CBF9DC700714A4C /* AppDelegate.m in Sources */,
-				048DE9FF1CBFC12900714A4C /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				04AA1A6E1CC094D800399FC4 /* MKAnnotationView+WebCache.m in Sources */,
 				048DEA051CBFC91F00714A4C /* UIView+ViewUtils.m in Sources */,
+				A563F2D91CC663B9003E0C22 /* KLParseEngine.m in Sources */,
 				04AA1A6F1CC094D800399FC4 /* NSData+ImageContentType.m in Sources */,
 				04AA1A781CC094D800399FC4 /* UIImage+GIF.m in Sources */,
 				04AA1A771CC094D800399FC4 /* UIButton+WebCache.m in Sources */,
@@ -362,7 +353,6 @@
 				048DE95F1CBF9DC700714A4C /* main.m in Sources */,
 				048DE97B1CBFA05200714A4C /* UIActionSheet+MKBlockAdditions.m in Sources */,
 				04AA1A741CC094D800399FC4 /* SDWebImageDownloaderOperation.m in Sources */,
-				048DE9FC1CBFC12900714A4C /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				04AA1A7C1CC094D800399FC4 /* UIImageView+WebCache.m in Sources */,
 				04AA1A7B1CC094D800399FC4 /* UIImageView+HighlightedWebCache.m in Sources */,
 				048DE97A1CBFA05200714A4C /* NSObject+MKBlockAdditions.m in Sources */,
@@ -470,7 +460,7 @@
 				INFOPLIST_FILE = ZhiHuSumbitAsk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.moxian.ZhiHuSumbitAsk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kunland.kb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -482,7 +472,7 @@
 				INFOPLIST_FILE = ZhiHuSumbitAsk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.moxian.ZhiHuSumbitAsk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kunland.kb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
