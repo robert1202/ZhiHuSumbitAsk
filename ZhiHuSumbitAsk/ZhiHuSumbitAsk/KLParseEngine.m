@@ -17,16 +17,17 @@
                                   @"<img(\\S*?)[^>]*>.*?</>|<img.*? />" options:NSRegularExpressionCaseInsensitive error:&error];
     NSArray *resultList = [regex matchesInString:plainString options:NSMatchingReportProgress range:NSMakeRange(0, [plainString length])];
     NSLog(@"%@",resultList);
-    NSMutableString *mutableStr = [plainString mutableCopy];
+    NSString *resultString = [plainString copy];
     
     NSLog(@"plainString ＝ %@",plainString);
 
     for (NSTextCheckingResult *result in resultList) {
-        [mutableStr replaceCharactersInRange:result.range withString:@"[上传图片]"];
+        NSString *checkString = [plainString substringWithRange:result.range];
+        resultString = [resultString stringByReplacingOccurrencesOfString:checkString withString:@"[上传图片]"];
     }
-    NSLog(@"mutableStr ＝ %@",mutableStr);
+    NSLog(@"mutableStr ＝ %@",resultString);
 
-    return mutableStr;
+    return resultString;
 }
 
 @end
